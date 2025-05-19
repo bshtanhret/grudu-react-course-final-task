@@ -19,7 +19,7 @@ import { useRouter } from 'next/navigation'
 import { FC, useState } from 'react'
 import { object, string } from 'yup'
 
-const page: FC = () => {
+const Page: FC = () => {
     const { replace } = useRouter()
     const [error, setError] = useState<string | null>(null)
     const {
@@ -132,7 +132,12 @@ const page: FC = () => {
                             )}
                             Sign Up
                         </Button>
-                        <Link href={routes.unAuth.login} className='m-auto hover:underline text-sm'>Already have an account?</Link>
+                        <Link
+                            href={routes.unAuth.login}
+                            className="m-auto hover:underline text-sm"
+                        >
+                            Already have an account?
+                        </Link>
                     </div>
                 </CardContent>
             </form>
@@ -140,4 +145,4 @@ const page: FC = () => {
     )
 }
 
-export default page
+export default Page
